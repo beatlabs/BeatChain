@@ -40,7 +40,12 @@ public class KeychainManager: KeychainManagerInterface {
     
     // MARK: - public interface
     
-   public func readValue(_ item: Queryable) throws -> String {
+    /// Read a string value from keychain using a queryable item
+    ///
+    /// - Parameter item: The queryable item
+    /// - Returns: The Value for the queryable item
+    /// - Throws: An error if somthing fails
+    public func readValue(_ item: Queryable) throws -> String {
         
         // Build a query
         var query = item.query
@@ -74,6 +79,12 @@ public class KeychainManager: KeychainManagerInterface {
         return value
     }
     
+    /// Save a string value to the keychain using a queryable item
+    ///
+    /// - Parameters:
+    ///   - value: The value to be saved
+    ///   - item: The queryable item
+    /// - Throws: An error if something fails
     public func saveValue(_ value: String, to item: Queryable) throws {
         
         // Encode the value into a Data object.
@@ -114,7 +125,10 @@ public class KeychainManager: KeychainManagerInterface {
         }
     }
     
-    /// Delete all keychain items that match a specific item's query
+    /// Delete all the keychain items that matches a specific queryable item
+    ///
+    /// - Parameter item: A queryable item
+    /// - Throws: An error if something fails
     public func deleteItem(_ item: Queryable) throws {
         
         // Delete the existing item(s) from the keychain.

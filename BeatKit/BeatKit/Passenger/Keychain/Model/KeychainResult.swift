@@ -16,7 +16,10 @@
 
 import Foundation
 
+/// The result of a fetch action to the keychain
 public struct KeychainResult {
+    /// The status code of a fetch action
     public let status: OSStatus
+    /// The result object of a fetch action
     public let queryResult: AnyObject?
 }

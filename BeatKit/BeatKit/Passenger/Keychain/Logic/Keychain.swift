@@ -27,10 +27,18 @@ public class Keychain: KeychainInterface {
     
     public init() { }
     
+    /// Add an item in the keychain that matches a certain query
+    ///
+    /// - Parameter query: The query for the item we want to add
+    /// - Returns: A result code
     public func add(_ query: [String: AnyObject]) -> OSStatus {
         return SecItemAdd(query as CFDictionary, nil)
     }
     
+    /// Fetch all the items that matches a certain query
+    ///
+    /// - Parameter query: The query for the items we want to fetch
+    /// - Returns: An object that contains a result code and an optional object
     public func fetch(_ query: [String: AnyObject]) -> KeychainResult {
         
         var queryResult: AnyObject?
@@ -41,10 +49,20 @@ public class Keychain: KeychainInterface {
         return KeychainResult(status: status, queryResult: queryResult)
     }
     
+    /// Update all the items that matches a certain query
+    ///
+    /// - Parameters:
+    ///   - query: The query for the items we want to update
+    ///   - attributes: The attributes that we want to update
+    /// - Returns: A result code
     public func update(_ query: [String: AnyObject], with attributes: [String: AnyObject]) -> OSStatus {
         return SecItemUpdate(query as CFDictionary, attributes as CFDictionary)
     }
     
+    /// Delete all the items that matches a certain query
+    ///
+    /// - Parameter query: The query for the items we want to update
+    /// - Returns: A result code
     public func delete(_ query: [String: AnyObject]) -> OSStatus {
         return SecItemDelete(query as CFDictionary)
     }

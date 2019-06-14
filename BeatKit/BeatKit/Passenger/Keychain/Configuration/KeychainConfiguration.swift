@@ -18,5 +18,7 @@ import Foundation
 
 struct KeychainConfiguration {
     static let serviceName = ""
+
+    // Remember that app and extensions must have the same AppID in order to have a shared keychain
     static let accessGroup = ""
 }
