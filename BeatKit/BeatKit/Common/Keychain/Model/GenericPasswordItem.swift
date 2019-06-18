@@ -41,6 +41,7 @@ extension GenericPasswordItem: Queryable {
             query[kSecAttrAccount as String] = account as AnyObject
         }
         query[kSecAttrAccessGroup as String] = accessGroup as AnyObject
+        query[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlock
         return query
     }
 }
