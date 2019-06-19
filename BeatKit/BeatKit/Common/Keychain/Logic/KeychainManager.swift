@@ -16,7 +16,7 @@
 
 import Foundation
 
-public enum KeychainManagerError: Error {
+public enum KeychainManagerError: Error, Equatable {
     case noItemFound
     case unexpectedData
     case unhandledError(status: OSStatus)
