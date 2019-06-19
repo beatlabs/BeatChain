@@ -20,7 +20,7 @@ import XCTest
 class KeychainManagerTests: XCTestCase {
 
     let mockKeychain = MockKeychain()
-    lazy var keychainManager = KeychainManager(keychain: mockKeychain)
+    lazy var sut = KeychainManager(keychain: mockKeychain)
     
     override func setUp() {
         super.setUp()
@@ -49,7 +49,7 @@ extension KeychainManagerTests {
 
         let item = GenericPasswordItem(account: nil)
 
-        let _ = try? keychainManager.readValue(item)
+        let _ = try? sut.readValue(item)
         
         let query = mockKeychain.query
        
@@ -64,7 +64,7 @@ extension KeychainManagerTests {
                                                      queryResult: [kSecValueData: "".data(using: .utf8)] as AnyObject)
         let item = GenericPasswordItem(account: nil)
         
-        XCTAssertThrowsError(try keychainManager.readValue(item), "") { (error) in
+        XCTAssertThrowsError(try sut.readValue(item), "") { (error) in
             XCTAssertTrue(error as! KeychainManagerError == KeychainManagerError.noItemFound)
         }
     }
@@ -75,7 +75,7 @@ extension KeychainManagerTests {
                                                      queryResult: [kSecValueData: "".data(using: .utf8)] as AnyObject)
         let item = GenericPasswordItem(account: nil)
         
-        XCTAssertThrowsError(try keychainManager.readValue(item), "") { (error) in
+        XCTAssertThrowsError(try sut.readValue(item), "") { (error) in
             XCTAssertTrue(error as! KeychainManagerError == KeychainManagerError.unhandledError(status: errSecBufferTooSmall))
         }
     }
@@ -86,7 +86,7 @@ extension KeychainManagerTests {
                                                      queryResult: [kSecValueData: ["":""]] as AnyObject)
         let item = GenericPasswordItem(account: nil)
         
-        XCTAssertThrowsError(try keychainManager.readValue(item), "") { (error) in
+        XCTAssertThrowsError(try sut.readValue(item), "") { (error) in
             XCTAssertTrue(error as! KeychainManagerError == KeychainManagerError.unexpectedData)
         }
     }
@@ -97,7 +97,7 @@ extension KeychainManagerTests {
                                                      queryResult: [kSecValueData: "12345".data(using: .utf8)] as AnyObject)
         let item = GenericPasswordItem(account: nil)
         
-        let value = try? keychainManager.readValue(item)
+        let value = try? sut.readValue(item)
         
         XCTAssert(value == "12345")
     }
@@ -113,7 +113,7 @@ extension KeychainManagerTests {
                                                      queryResult: [kSecValueData: "12345".data(using: .utf8)] as AnyObject)
         let item = GenericPasswordItem(account: nil)
         
-        XCTAssertNoThrow(try keychainManager.saveValue("10", to: item))
+        XCTAssertNoThrow(try sut.saveValue("10", to: item))
         XCTAssertTrue((mockKeychain.attributesToUpdate[kSecValueData as String] as? Data) == "10".data(using: String.Encoding.utf8))
     }
     
@@ -123,7 +123,7 @@ extension KeychainManagerTests {
                                                      queryResult: [kSecValueData: "12345".data(using: .utf8)] as AnyObject)
         let item = GenericPasswordItem(account: nil)
         
-        XCTAssertNoThrow(try keychainManager.saveValue("10", to: item))
+        XCTAssertNoThrow(try sut.saveValue("10", to: item))
         XCTAssertTrue((mockKeychain.query[kSecValueData as String] as? Data) == "10".data(using: String.Encoding.utf8))
     }
 }
@@ -138,7 +138,7 @@ extension KeychainManagerTests {
         mockKeychain.osStatus = errSecItemNotFound
         let item = GenericPasswordItem(account: nil)
 
-        XCTAssertNoThrow(try keychainManager.deleteItem(item))
+        XCTAssertNoThrow(try sut.deleteItem(item))
     }
     
     func testDeleteItem_whenItemExist_deleteItemSucceeded() {
@@ -146,7 +146,7 @@ extension KeychainManagerTests {
         mockKeychain.osStatus = noErr
         let item = GenericPasswordItem(account: nil)
         
-        XCTAssertNoThrow(try keychainManager.deleteItem(item))
+        XCTAssertNoThrow(try sut.deleteItem(item))
     }
     
     func testDeleteItem_whenUnexpectedError_throwUnexpectedError() {
@@ -154,7 +154,7 @@ extension KeychainManagerTests {
         mockKeychain.osStatus = errSecBufferTooSmall
         let item = GenericPasswordItem(account: nil)
         
-        XCTAssertThrowsError(try keychainManager.deleteItem(item), "") { (error) in
+        XCTAssertThrowsError(try sut.deleteItem(item), "") { (error) in
             XCTAssertTrue(error as! KeychainManagerError == KeychainManagerError.unhandledError(status: errSecBufferTooSmall))
         }
     }
