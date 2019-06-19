@@ -16,14 +16,14 @@
 
 import Foundation
 
-public protocol KeychainInterface {
+public protocol KeychainProtocol {
     func add(_ query: [String: AnyObject]) -> OSStatus
     func fetch(_ query: [String: AnyObject]) -> KeychainResult
     func update(_ query: [String: AnyObject], with attributes: [String: AnyObject]) -> OSStatus
     func delete(_ query: [String: AnyObject]) -> OSStatus
 }
 
-public class Keychain: KeychainInterface {
+public class Keychain: KeychainProtocol {
     
     public init() { }
     

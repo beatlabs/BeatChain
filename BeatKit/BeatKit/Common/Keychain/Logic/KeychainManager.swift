@@ -22,19 +22,19 @@ public enum KeychainManagerError: Error, Equatable {
     case unhandledError(status: OSStatus)
 }
 
-public protocol KeychainManagerInterface {
+public protocol KeychainManagerProtocol {
     func readValue(_ item: Queryable) throws -> String
     func saveValue(_ value: String, to item: Queryable) throws
     func deleteItem(_ item: Queryable) throws
 }
 
-public class KeychainManager: KeychainManagerInterface {
+public class KeychainManager: KeychainManagerProtocol {
     
-    private let keychain: KeychainInterface
+    private let keychain: KeychainProtocol
     
     // MARK: - Interface
     
-    public init(keychain: KeychainInterface = Keychain()) {
+    public init(keychain: KeychainProtocol = Keychain()) {
         self.keychain = keychain
     }
     

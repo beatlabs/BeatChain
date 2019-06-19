@@ -17,7 +17,7 @@
 import Foundation
 @testable import BeatChain
 
-class MockKeychain: KeychainInterface {
+class MockKeychain: KeychainProtocol {
     
     var osStatus: OSStatus = 0
     var keychainResult = KeychainResult(status: 10, queryResult: nil)
