@@ -44,4 +44,12 @@ class MockKeychain: KeychainInterface {
         self.query = query
         return osStatus
     }
+    
+    func clearData() {
+        
+        osStatus = 0
+        keychainResult = KeychainResult(status: 0, queryResult: nil)
+        query = [:]
+        attributesToUpdate = [:]
+    }
 }

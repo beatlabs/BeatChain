@@ -21,25 +21,12 @@ class KeychainManagerTests: XCTestCase {
 
     let mockKeychain = MockKeychain()
     lazy var sut = KeychainManager(keychain: mockKeychain)
-    
-    override func setUp() {
-        super.setUp()
-    }
 
     override func tearDown() {
         super.tearDown()
-        clearMockKeychain()
-    }
-    
-    private func clearMockKeychain() {
-        
-        mockKeychain.osStatus = 0
-        mockKeychain.keychainResult = KeychainResult(status: 0, queryResult: nil)
-        mockKeychain.query = [:]
-        mockKeychain.attributesToUpdate = [:]
+        mockKeychain.clearData()
     }
 }
-
 
 // MARK: - Read value
 
@@ -52,7 +39,6 @@ extension KeychainManagerTests {
         let _ = try? sut.readValue(item)
         
         let query = mockKeychain.query
-       
         XCTAssertTrue((query[kSecMatchLimit as String] as? String) == kSecMatchLimitOne as String)
         XCTAssertTrue((query[kSecReturnAttributes as String] as? Bool) == (kCFBooleanTrue as! Bool))
         XCTAssertTrue((query[kSecReturnData as String] as? Bool) == (kCFBooleanTrue as! Bool))
