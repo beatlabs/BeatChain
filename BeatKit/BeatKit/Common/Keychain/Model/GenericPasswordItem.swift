@@ -22,12 +22,14 @@ public struct GenericPasswordItem {
     
     let service: String = KeychainConfiguration.serviceName
     let account: String?
-    let accessGroup: String? = KeychainConfiguration.accessGroup
+    let accessGroup: String?
     
     // MARK: Initializer
     
-    public init(account: String?) {
+    public init(account: String?, accessGroup: String?) {
+        
         self.account = account
+        self.accessGroup = accessGroup
     }
 }
 
@@ -40,7 +42,9 @@ extension GenericPasswordItem: Queryable {
         if let account = account {
             query[kSecAttrAccount as String] = account as AnyObject
         }
-        query[kSecAttrAccessGroup as String] = accessGroup as AnyObject
+        if let accessGroup = accessGroup {
+            query[kSecAttrAccessGroup as String] = accessGroup as AnyObject
+        }
         query[kSecAttrAccessible as String] = kSecAttrAccessibleAfterFirstUnlock
         return query
     }
