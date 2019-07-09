@@ -16,9 +16,13 @@
 
 import Foundation
 
-struct KeychainConfiguration {
+@objcMembers
+public class KeychainConfiguration {
+
+    /// A key whose value is a string indicating the item's service.
     static let serviceName = ""
 
-    // Remember that app and extensions must have the same AppID in order to have a shared keychain
+    /// An access group is a logical collection of apps tagged with a particular group name string.
+    /// Remember that the app and the extensions must have the same AppID in order to have a shared keychain
     static let accessGroup = ""
 }
