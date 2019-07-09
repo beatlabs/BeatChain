@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		569433EB22D4CD0B00F04A97 /* BeatChain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569433E122D4CD0A00F04A97 /* BeatChain.framework */; };
-		569433F022D4CD0B00F04A97 /* BeatChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569433EF22D4CD0B00F04A97 /* BeatChainTests.swift */; };
 		569433F222D4CD0B00F04A97 /* BeatChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 569433E422D4CD0A00F04A97 /* BeatChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56F3A2C622D4DB7200D88BFB /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3A2BD22D4DB7200D88BFB /* KeychainManager.swift */; };
+		56F3A2C722D4DB7200D88BFB /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3A2BE22D4DB7200D88BFB /* Keychain.swift */; };
+		56F3A2C822D4DB7200D88BFB /* GenericPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3A2C022D4DB7200D88BFB /* GenericPasswordItem.swift */; };
+		56F3A2C922D4DB7200D88BFB /* KeychainResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3A2C122D4DB7200D88BFB /* KeychainResult.swift */; };
+		56F3A2CA22D4DB7200D88BFB /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3A2C322D4DB7200D88BFB /* Queryable.swift */; };
+		56F3A2CF22D4DB7A00D88BFB /* KeychainManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3A2CC22D4DB7A00D88BFB /* KeychainManagerTests.swift */; };
+		56F3A2D022D4DB7A00D88BFB /* MockKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3A2CD22D4DB7A00D88BFB /* MockKeychain.swift */; };
+		56F3A2D122D4DB7A00D88BFB /* GenericPasswordItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3A2CE22D4DB7A00D88BFB /* GenericPasswordItemTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +34,15 @@
 		569433E422D4CD0A00F04A97 /* BeatChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeatChain.h; sourceTree = "<group>"; };
 		569433E522D4CD0A00F04A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569433EA22D4CD0B00F04A97 /* BeatChainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatChainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		569433EF22D4CD0B00F04A97 /* BeatChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatChainTests.swift; sourceTree = "<group>"; };
 		569433F122D4CD0B00F04A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56F3A2BD22D4DB7200D88BFB /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		56F3A2BE22D4DB7200D88BFB /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		56F3A2C022D4DB7200D88BFB /* GenericPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericPasswordItem.swift; sourceTree = "<group>"; };
+		56F3A2C122D4DB7200D88BFB /* KeychainResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainResult.swift; sourceTree = "<group>"; };
+		56F3A2C322D4DB7200D88BFB /* Queryable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queryable.swift; sourceTree = "<group>"; };
+		56F3A2CC22D4DB7A00D88BFB /* KeychainManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManagerTests.swift; sourceTree = "<group>"; };
+		56F3A2CD22D4DB7A00D88BFB /* MockKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockKeychain.swift; sourceTree = "<group>"; };
+		56F3A2CE22D4DB7A00D88BFB /* GenericPasswordItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericPasswordItemTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,9 @@
 		569433E322D4CD0A00F04A97 /* BeatChain */ = {
 			isa = PBXGroup;
 			children = (
+				56F3A2BC22D4DB7200D88BFB /* Logic */,
+				56F3A2BF22D4DB7200D88BFB /* Model */,
+				56F3A2C222D4DB7200D88BFB /* Protocol */,
 				569433E422D4CD0A00F04A97 /* BeatChain.h */,
 				569433E522D4CD0A00F04A97 /* Info.plist */,
 			);
@@ -80,10 +97,38 @@
 		569433EE22D4CD0B00F04A97 /* BeatChainTests */ = {
 			isa = PBXGroup;
 			children = (
-				569433EF22D4CD0B00F04A97 /* BeatChainTests.swift */,
+				56F3A2CE22D4DB7A00D88BFB /* GenericPasswordItemTests.swift */,
+				56F3A2CC22D4DB7A00D88BFB /* KeychainManagerTests.swift */,
+				56F3A2CD22D4DB7A00D88BFB /* MockKeychain.swift */,
 				569433F122D4CD0B00F04A97 /* Info.plist */,
 			);
 			path = BeatChainTests;
+			sourceTree = "<group>";
+		};
+		56F3A2BC22D4DB7200D88BFB /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				56F3A2BD22D4DB7200D88BFB /* KeychainManager.swift */,
+				56F3A2BE22D4DB7200D88BFB /* Keychain.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		56F3A2BF22D4DB7200D88BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56F3A2C022D4DB7200D88BFB /* GenericPasswordItem.swift */,
+				56F3A2C122D4DB7200D88BFB /* KeychainResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		56F3A2C222D4DB7200D88BFB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				56F3A2C322D4DB7200D88BFB /* Queryable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F3A2CA22D4DB7200D88BFB /* Queryable.swift in Sources */,
+				56F3A2C622D4DB7200D88BFB /* KeychainManager.swift in Sources */,
+				56F3A2C722D4DB7200D88BFB /* Keychain.swift in Sources */,
+				56F3A2C922D4DB7200D88BFB /* KeychainResult.swift in Sources */,
+				56F3A2C822D4DB7200D88BFB /* GenericPasswordItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569433F022D4CD0B00F04A97 /* BeatChainTests.swift in Sources */,
+				56F3A2D022D4DB7A00D88BFB /* MockKeychain.swift in Sources */,
+				56F3A2CF22D4DB7A00D88BFB /* KeychainManagerTests.swift in Sources */,
+				56F3A2D122D4DB7A00D88BFB /* GenericPasswordItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +443,7 @@
 		569433F922D4CD0B00F04A97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PMW49D46PG;
 				INFOPLIST_FILE = BeatChainTests/Info.plist;
@@ -409,6 +462,7 @@
 		569433FA22D4CD0B00F04A97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PMW49D46PG;
 				INFOPLIST_FILE = BeatChainTests/Info.plist;

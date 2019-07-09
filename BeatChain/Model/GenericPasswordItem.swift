@@ -20,14 +20,15 @@ public struct GenericPasswordItem {
     
     // MARK: Properties
     
-    let service: String = KeychainConfiguration.serviceName
+    let service: String
     let account: String?
     let accessGroup: String?
     
     // MARK: Initializer
     
-    public init(account: String?, accessGroup: String?) {
+    public init(service: String, account: String?, accessGroup: String?) {
         
+        self.service = service
         self.account = account
         self.accessGroup = accessGroup
     }

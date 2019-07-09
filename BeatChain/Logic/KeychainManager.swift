@@ -58,12 +58,10 @@ public class KeychainManager: KeychainManagerProtocol {
         
         // Check the return status and throw an error if appropriate.
         guard keychainResponse.status != errSecItemNotFound else {
-            BKLogDebug("Item not found", extended: true, category: .keychain)
             throw KeychainManagerError.noItemFound
         }
         
         guard keychainResponse.status == noErr else {
-            BKLogError("Error getting item: \(keychainResponse.status)", extended: true, category: .keychain)
             throw KeychainManagerError.unhandledError(status: keychainResponse.status)
         }
         
@@ -71,11 +69,9 @@ public class KeychainManager: KeychainManagerProtocol {
         guard let existingItem = keychainResponse.queryResult as? [String : AnyObject],
             let data = existingItem[kSecValueData as String] as? Data,
             let value = String(data: data, encoding: String.Encoding.utf8) else {
-                BKLogError("Invalid item format", extended: true, category: .keychain)
                 throw KeychainManagerError.unexpectedData
         }
         
-        BKLogDebug("Value has been read successfully", extended: true, category: .keychain)
         return value
     }
     
@@ -102,10 +98,8 @@ public class KeychainManager: KeychainManagerProtocol {
             
             // Throw an error if an unexpected status was returned.
             guard status == noErr else {
-                BKLogError("Error getting item: \(status)", extended: true, category: .keychain)
                 throw KeychainManagerError.unhandledError(status: status)
             }
-            BKLogDebug("Value has saved successfully", extended: true, category: .keychain)
         }
         catch KeychainManagerError.noItemFound {
             
@@ -118,10 +112,8 @@ public class KeychainManager: KeychainManagerProtocol {
             
             // Throw an error if an unexpected status was returned.
             guard status == noErr else {
-                BKLogError("Error getting item: \(status)", extended: true, category: .keychain)
                 throw KeychainManagerError.unhandledError(status: status)
             }
-            BKLogDebug("Value has been saved successfully", extended: true, category: .keychain)
         }
     }
     
@@ -136,9 +128,7 @@ public class KeychainManager: KeychainManagerProtocol {
         
         // Throw an error if an unexpected status was returned.
         guard status == noErr || status == errSecItemNotFound else {
-            BKLogError("Error getting item: \(status)", extended: true, category: .keychain)
             throw KeychainManagerError.unhandledError(status: status)
         }
-        BKLogDebug("Item has been deleted successfully", extended: true, category: .keychain)
     }
 }

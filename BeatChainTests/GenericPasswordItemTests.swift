@@ -21,18 +21,18 @@ class GenericPasswordItemTests: XCTestCase {
 
     func testItem_whenAccountExist() {
         
-        let query = GenericPasswordItem(account: "123").query
+        let query = GenericPasswordItem(service: "TestService", account: "123", accessGroup: "TestAccessGroup").query
 
         XCTAssertTrue((query[kSecClass as String] as? String) == kSecClassGenericPassword as String)
-        XCTAssertTrue((query[kSecAttrService as String] as? String) == "")
+        XCTAssertTrue((query[kSecAttrService as String] as? String) == "TestService")
         XCTAssertTrue(query[kSecAttrAccount as String] as? String == "123")
-        XCTAssertTrue((query[kSecAttrAccessGroup as String] as? String) == "")
+        XCTAssertTrue((query[kSecAttrAccessGroup as String] as? String) == "TestAccessGroup")
         XCTAssertTrue((query[kSecAttrAccessible as String] as? String) == kSecAttrAccessibleAfterFirstUnlock as String)
     }
     
     func testItem_whenAccountNoExist() {
         
-        let query = GenericPasswordItem(account: nil).query
+        let query = GenericPasswordItem(service: "", account: nil, accessGroup: nil).query
         
         XCTAssertNil(query[kSecAttrAccount as String])
     }
