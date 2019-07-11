@@ -12,6 +12,7 @@
 - [Documentation](#documentation)
 - [License](#license)
 - [Authors](#authors)
+- [Credits](#credits)
 
 ## Requirements
 
@@ -152,3 +153,8 @@ BeatChain is released under the Apache License Version 2.0. See [LICENSE](LICENS
 The iOS BEAT team
 
 [https://github.com/taxibeat/BeatChain](https://github.com/taxibeat/BeatChain)
+
+## Credits
+
+* [GenericKeychain](https://developer.apple.com/library/archive/samplecode/GenericKeychain/Introduction/Intro.html#//apple_ref/doc/uid/DTS40007797)
+* [Keychain Services API Tutorial for Passwords in Swift](https://www.raywenderlich.com/9240-keychain-services-api-tutorial-for-passwords-in-swift)
