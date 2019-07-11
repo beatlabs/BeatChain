@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = "BeatChain"
   s.version      = "1.0.0"
-  s.summary      = "BeatChain is a password manager for iOS devices written in swift."
+  s.summary      = "BeatChain is a manager for saving and retrieving string values into keychain written in swift."
   s.description  = <<-DESC
-                      BeatChain is a password manager for iOS devices, you can add, retrieve and delete
+                      BeatChain is a manager for saving and retrieving string values into keychain written in swift. iOS devices, you can add, retrieve and delete
                       items from keychain.
                    DESC
 

@@ -1,6 +1,6 @@
 # BeatChain
 
-**BeatChain** is a password manager for iOS devices written in swift.
+**BeatChain** is a manager for saving and retrieving string values into keychain written in swift.
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-green.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
 
@@ -117,7 +117,7 @@ do {
 } catch KeychainManagerError.noItemFound {
     assertionFailure("Item not found")
 } catch {
-    assertionFailure("Get password failed with error")
+    assertionFailure("Get password failed")
 }
 
 // delete password item from keychain
