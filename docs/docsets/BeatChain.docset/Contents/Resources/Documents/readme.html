@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BeatChain  Reference</title>
+    <title>README  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,22 +10,36 @@
     
   </head>
   <body>
-    <a title="BeatChain  Reference"></a>
+    <a title="README  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">BeatChain Docs</a> (27% documented)</p>
+        <p><a href="index.html"> Docs</a> (27% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
-        <a href="index.html">BeatChain Reference</a>
+        <a href="index.html"> Reference</a>
         <img id="carat" src="img/carat.png" />
-        BeatChain  Reference
+        README  Reference
       </p>
     </div>
     <div class="content-wrapper">
       <nav class="sidebar">
         <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="code_of_conduct.html">CODE_OF_CONDUCT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="contributing.html">CONTRIBUTING</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="readme.html">README</a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-group-name">
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
@@ -78,19 +92,15 @@
             
             <h1 id='beatchain' class='heading'>BeatChain</h1>
 
-<p><strong>BeatChain</strong> is a manager for saving and retrieving string values into keychain written in swift.</p>
-
-<p><a href="#carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a> <img src="https://img.shields.io/badge/Swift-4.0.x-green.svg" alt="Swift 4.0.x"> <img src="https://img.shields.io/badge/platforms-iOS-lightgrey.svg" alt="platforms"></p>
+<p><strong>BeatChain</strong> is a password manager for iOS devices written in swift.</p>
 <h2 id='contents' class='heading'>Contents</h2>
 
 <ul>
 <li><a href="#requirements">Requirements</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#usage">Usage</a></li>
-<li><a href="#documentation">Documentation</a></li>
 <li><a href="#license">License</a></li>
 <li><a href="#authors">Authors</a></li>
-<li><a href="#credits">Credits</a></li>
 </ul>
 <h2 id='requirements' class='heading'>Requirements</h2>
 
@@ -173,7 +183,7 @@
 <span class="p">}</span> <span class="k">catch</span> <span class="kt">KeychainManagerError</span><span class="o">.</span><span class="n">noItemFound</span> <span class="p">{</span>
     <span class="nf">assertionFailure</span><span class="p">(</span><span class="s">"Item not found"</span><span class="p">)</span>
 <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
-    <span class="nf">assertionFailure</span><span class="p">(</span><span class="s">"Get password failed"</span><span class="p">)</span>
+    <span class="nf">assertionFailure</span><span class="p">(</span><span class="s">"Get password failed with error"</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="c1">// delete password item from keychain</span>
@@ -184,15 +194,6 @@
     <span class="nf">assertionFailure</span><span class="p">(</span><span class="s">"Delete password failed"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
-<h2 id='documentation' class='heading'>Documentation</h2>
-
-<p>Install <a href="https://github.com/realm/jazzy">Jazzy</a></p>
-<pre class="highlight shell"><code><span class="nv">$ </span>gem <span class="nb">install </span>jazzy
-</code></pre>
-
-<p>then you can generate documentation by using the following command:</p>
-<pre class="highlight shell"><code><span class="nv">$ </span>jazzy <span class="nt">--min-acl</span> internal
-</code></pre>
 <h2 id='license' class='heading'>License</h2>
 
 <p>BeatChain is released under the Apache License Version 2.0. See <a href="LICENSE">LICENSE</a> for details.</p>
@@ -201,17 +202,11 @@
 <p>The iOS BEAT team</p>
 
 <p><a href="https://github.com/taxibeat/BeatChain">https://github.com/taxibeat/BeatChain</a></p>
-<h2 id='credits' class='heading'>Credits</h2>
-
-<ul>
-<li><a href="https://developer.apple.com/library/archive/samplecode/GenericKeychain/Introduction/Intro.html#//apple_ref/doc/uid/DTS40007797">GenericKeychain</a></li>
-<li><a href="https://www.raywenderlich.com/9240-keychain-services-api-tutorial-for-passwords-in-swift">Keychain Services API Tutorial for Passwords in Swift</a></li>
-</ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/taxibeat/BeatChain" target="_blank" rel="external">ΒΕΑΤ</a>. All rights reserved. (Last updated: 2019-07-11)</p>
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-07-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
