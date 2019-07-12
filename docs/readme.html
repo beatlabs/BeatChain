@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>README  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="README  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (27% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        README  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="code_of_conduct.html">CODE_OF_CONDUCT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="contributing.html">CONTRIBUTING</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Keychain.html">Keychain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KeychainManager.html">KeychainManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/KeychainManagerError.html">KeychainManagerError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/KeychainManagerProtocol.html">KeychainManagerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/KeychainProtocol.html">KeychainProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Queryable.html">Queryable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/GenericPasswordItem.html">GenericPasswordItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/KeychainResult.html">KeychainResult</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='beatchain' class='heading'>BeatChain</h1>
+
+<p><strong>BeatChain</strong> is a password manager for iOS devices written in swift.</p>
+<h2 id='contents' class='heading'>Contents</h2>
+
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#authors">Authors</a></li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 10.0+</li>
+<li>Swift 4.0+</li>
+<li>Xcode 10.0+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>gem <span class="nb">install </span>cocoapods
+</code></pre>
+
+<p>to integrate BeatChain into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'10.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'BeatChain'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0.0'</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>then, run the following command, this will fetch and install the BeatChain pod:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>brew <span class="nb">install </span>carthage
+</code></pre>
+
+<p>to integrate BeatChain into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "taxibeat/BeatChain" ~&gt; 1.0.0
+</code></pre>
+
+<p>Run <code>carthage update</code> to build the framework and drag the built <code>BeatChain.framework</code> into your Xcode project.</p>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>You can use <a href="https://swift.org/package-manager">The Swift Package Manager</a> to install <code>BeatChain</code> by adding the proper description to your <code>Package.swift</code> file:</p>
+<pre class="highlight swift"><code><span class="c1">// swift-tools-version:4.0</span>
+<span class="kd">import</span> <span class="kt">PackageDescription</span>
+
+<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"YOUR_PROJECT_NAME"</span><span class="p">,</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/taxibeat/BeatChain.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"1.0.0"</span><span class="p">),</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>then, run the following command:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>swift build
+</code></pre>
+<h3 id='manually' class='heading'>Manually</h3>
+
+<p>If you prefer you can build the framework manually and drag generated framework <code>BeatChain.framework</code> into your Xcode project.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='quick-start' class='heading'>Quick Start</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BeatChain</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">keychainManager</span> <span class="o">=</span> <span class="kt">KeychainManager</span><span class="p">()</span>
+
+<span class="c1">// save password into keychain</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">item</span> <span class="o">=</span> <span class="kt">GenericPasswordItem</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="s">"username"</span><span class="p">,</span> <span class="nv">accessGroup</span><span class="p">:</span> <span class="s">"accessGroup"</span><span class="p">)</span>
+    <span class="k">try</span> <span class="n">keychainManager</span><span class="o">.</span><span class="nf">saveValue</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">assertionFailure</span><span class="p">(</span><span class="s">"Save password failed"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// read password from keychain</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">item</span> <span class="o">=</span> <span class="kt">GenericPasswordItem</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="s">"account"</span><span class="p">,</span> <span class="nv">accessGroup</span><span class="p">:</span> <span class="s">"accessGroup"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">try</span> <span class="n">keychainManager</span><span class="o">.</span><span class="nf">readValue</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="kt">KeychainManagerError</span><span class="o">.</span><span class="n">noItemFound</span> <span class="p">{</span>
+    <span class="nf">assertionFailure</span><span class="p">(</span><span class="s">"Item not found"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">assertionFailure</span><span class="p">(</span><span class="s">"Get password failed with error"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// delete password item from keychain</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">item</span> <span class="o">=</span> <span class="kt">GenericPasswordItem</span><span class="p">(</span><span class="nv">account</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">accessGroup</span><span class="p">:</span> <span class="s">"accessGroup"</span><span class="p">)</span>
+    <span class="k">try</span> <span class="n">keychainManager</span><span class="o">.</span><span class="nf">deleteItem</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">assertionFailure</span><span class="p">(</span><span class="s">"Delete password failed"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p>BeatChain is released under the Apache License Version 2.0. See <a href="LICENSE">LICENSE</a> for details.</p>
+<h2 id='authors' class='heading'>Authors</h2>
+
+<p>The iOS BEAT team</p>
+
+<p><a href="https://github.com/taxibeat/BeatChain">https://github.com/taxibeat/BeatChain</a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-07-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

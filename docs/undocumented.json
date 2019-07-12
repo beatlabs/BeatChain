@@ -1,0 +1,187 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/Keychain.swift",
+      "line": 19,
+      "symbol": "KeychainProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/Keychain.swift",
+      "line": 20,
+      "symbol": "KeychainProtocol.add(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/Keychain.swift",
+      "line": 21,
+      "symbol": "KeychainProtocol.fetch(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/Keychain.swift",
+      "line": 22,
+      "symbol": "KeychainProtocol.update(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/Keychain.swift",
+      "line": 23,
+      "symbol": "KeychainProtocol.delete(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/Keychain.swift",
+      "line": 26,
+      "symbol": "Keychain",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/Keychain.swift",
+      "line": 28,
+      "symbol": "Keychain.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 19,
+      "symbol": "KeychainManagerError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 20,
+      "symbol": "KeychainManagerError.noItemFound",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 21,
+      "symbol": "KeychainManagerError.unexpectedData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 22,
+      "symbol": "KeychainManagerError.unhandledError(status:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 25,
+      "symbol": "KeychainManagerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 26,
+      "symbol": "KeychainManagerProtocol.readValue(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 27,
+      "symbol": "KeychainManagerProtocol.saveValue(_:to:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 28,
+      "symbol": "KeychainManagerProtocol.deleteItem(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 31,
+      "symbol": "KeychainManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Logic/KeychainManager.swift",
+      "line": 37,
+      "symbol": "KeychainManager.init(keychain:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Model/GenericPasswordItem.swift",
+      "line": 19,
+      "symbol": "GenericPasswordItem",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Model/GenericPasswordItem.swift",
+      "line": 23,
+      "symbol": "GenericPasswordItem.service",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Model/GenericPasswordItem.swift",
+      "line": 24,
+      "symbol": "GenericPasswordItem.account",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Model/GenericPasswordItem.swift",
+      "line": 25,
+      "symbol": "GenericPasswordItem.accessGroup",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Model/GenericPasswordItem.swift",
+      "line": 29,
+      "symbol": "GenericPasswordItem.init(service:account:accessGroup:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Model/GenericPasswordItem.swift",
+      "line": 37,
+      "symbol": "GenericPasswordItem",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Model/GenericPasswordItem.swift",
+      "line": 39,
+      "symbol": "GenericPasswordItem.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Protocol/Queryable.swift",
+      "line": 19,
+      "symbol": "Queryable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/spirosgerokostas/Development/iOS/BeatChain/BeatChain/Protocol/Queryable.swift",
+      "line": 20,
+      "symbol": "Queryable.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/spirosgerokostas/Development/iOS/BeatChain"
+}
