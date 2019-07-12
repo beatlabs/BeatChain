@@ -36,7 +36,7 @@ extension KeychainManagerTests {
 
         let item = GenericPasswordItem(service: "", account: nil, accessGroup: nil)
 
-        let _ = try? sut.readValue(item)
+        _ = try? sut.readValue(item)
         
         let query = mockKeychain.query
         XCTAssertTrue((query[kSecMatchLimit as String] as? String) == kSecMatchLimitOne as String)
@@ -69,7 +69,7 @@ extension KeychainManagerTests {
     func testReadValue_whenUnexpectedData_throwUnexpectedDataError() {
         
         mockKeychain.keychainResult = KeychainResult(status: noErr,
-                                                     queryResult: [kSecValueData: ["":""]] as AnyObject)
+                                                     queryResult: [kSecValueData: ["": ""]] as AnyObject)
         let item = GenericPasswordItem(service: "", account: nil, accessGroup: nil)
         
         XCTAssertThrowsError(try sut.readValue(item), "") { (error) in
@@ -113,7 +113,6 @@ extension KeychainManagerTests {
         XCTAssertTrue((mockKeychain.query[kSecValueData as String] as? Data) == "10".data(using: String.Encoding.utf8))
     }
 }
-
 
 // MARK: - Delete item
 

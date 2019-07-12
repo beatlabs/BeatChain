@@ -36,8 +36,8 @@ public struct GenericPasswordItem {
 
 extension GenericPasswordItem: Queryable {
     
-    public var query: [String : AnyObject] {
-        var query = [String : AnyObject]()
+    public var query: [String: AnyObject] {
+        var query = [String: AnyObject]()
         query[kSecClass as String] = kSecClassGenericPassword
         query[kSecAttrService as String] = service as AnyObject
         if let account = account {
