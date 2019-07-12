@@ -2,7 +2,7 @@
 
 **BeatChain** is a manager for saving and retrieving string values into keychain written in swift.
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-green.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
+[![Build Status](https://travis-ci.com/taxibeat/BeatChain.svg?branch=master)](https://travis-ci.com/taxibeat/BeatChain) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-green.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
 
 ## Contents
 

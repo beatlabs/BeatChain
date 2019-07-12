@@ -5,7 +5,7 @@ TARGET ?= BeatChain
 PLATFORM ?= iOS
 
 ifeq ($(PLATFORM), iOS)
-	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 8,OS=12.0'
+	DESTINATION ?= 'platform=iOS Simulator,name=iPhone 8,OS=12.2'
 endif
 
 XCPRETTY :=
