@@ -3,6 +3,7 @@ disabled_rules:
   - opening_brace
   - identifier_name
   - file_length
+  - force_unwrapping
 opt_in_rules:
   - block_based_kvo
   - closure_body_length
@@ -37,4 +38,4 @@ type_body_length:
   warning: 300
   error: 400
 excluded:
-  - Pods
+  - BeatChainTests

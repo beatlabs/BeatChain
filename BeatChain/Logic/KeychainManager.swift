@@ -66,7 +66,7 @@ public class KeychainManager: KeychainManagerProtocol {
         }
         
         // Parse the string value from the query result.
-        guard let existingItem = keychainResponse.queryResult as? [String : AnyObject],
+        guard let existingItem = keychainResponse.queryResult as? [String: AnyObject],
             let data = existingItem[kSecValueData as String] as? Data,
             let value = String(data: data, encoding: String.Encoding.utf8) else {
                 throw KeychainManagerError.unexpectedData
@@ -91,7 +91,7 @@ public class KeychainManager: KeychainManagerProtocol {
             try _ = readValue(item)
             
             // Update the existing item with the new password.
-            var attributesToUpdate = [String : AnyObject]()
+            var attributesToUpdate = [String: AnyObject]()
             attributesToUpdate[kSecValueData as String] = encodedValue as AnyObject?
             
             let status = keychain.update(item.query, with: attributesToUpdate)
@@ -100,8 +100,7 @@ public class KeychainManager: KeychainManagerProtocol {
             guard status == noErr else {
                 throw KeychainManagerError.unhandledError(status: status)
             }
-        }
-        catch KeychainManagerError.noItemFound {
+        } catch KeychainManagerError.noItemFound {
             
             // No item was found in the keychain. Create a dictionary to save as a new keychain item.
             var newItem = item.query
