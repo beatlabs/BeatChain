@@ -2,7 +2,7 @@
 
 **BeatChain** is a manager for saving and retrieving string values into keychain written in swift.
 
-[![Build Status](https://travis-ci.com/beatlabs/BeatChain.svg?branch=master)](https://travis-ci.com/beatlabs/BeatChain) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-green.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
+[![Build Status](https://travis-ci.com/beatlabs/BeatChain.svg?branch=master)](https://travis-ci.com/beatlabs/BeatChain) [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/BeatChain.svg)](https://cocoapods.org/pods/BeatChain) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-green.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
 
 ## Contents
 
@@ -61,7 +61,7 @@ $ brew install carthage
 to integrate BeatChain into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "beatlabs/BeatChain" ~> 1.0.0
+github "beatlabs/BeatChain" "master"
 ```
 
 Run `carthage update` to build the framework and drag the built `BeatChain.framework` into your Xcode project.
