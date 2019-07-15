@@ -2,7 +2,7 @@
 
 **BeatChain** is a manager for saving and retrieving string values into keychain written in swift.
 
-[![Build Status](https://travis-ci.com/taxibeat/BeatChain.svg?branch=master)](https://travis-ci.com/taxibeat/BeatChain) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-green.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
+[![Build Status](https://travis-ci.com/beatlabs/BeatChain.svg?branch=master)](https://travis-ci.com/beatlabs/BeatChain) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](#carthage) ![Swift 4.0.x](https://img.shields.io/badge/Swift-4.0.x-green.svg) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg)
 
 ## Contents
 
@@ -61,7 +61,7 @@ $ brew install carthage
 to integrate BeatChain into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "taxibeat/BeatChain" ~> 1.0.0
+github "beatlabs/BeatChain" ~> 1.0.0
 ```
 
 Run `carthage update` to build the framework and drag the built `BeatChain.framework` into your Xcode project.
@@ -77,7 +77,7 @@ import PackageDescription
 let package = Package(
     name: "YOUR_PROJECT_NAME",
     dependencies: [
-        .package(url: "https://github.com/taxibeat/BeatChain.git", from: "1.0.0"),
+        .package(url: "https://github.com/beatlabs/BeatChain.git", from: "1.0.0"),
     ]
 )
 ```
@@ -152,7 +152,7 @@ BeatChain is released under the Apache License Version 2.0. See [LICENSE](LICENS
 
 The iOS BEAT team
 
-[https://github.com/taxibeat/BeatChain](https://github.com/taxibeat/BeatChain)
+[https://github.com/beatlabs/BeatChain](https://github.com/beatlabs/BeatChain)
 
 ## Credits
 
