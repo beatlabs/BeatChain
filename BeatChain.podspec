@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
                       items from keychain.
                    DESC
 
-  s.homepage           = "https://github.com/taxibeat/BeatChain"
+  s.homepage           = "https://github.com/beatlabs/BeatChain"
   s.license            = { :type => "Apache Licence, Version 2.0", :file => "LICENSE" }
   s.authors            = { "ΒΕΑΤ" => "iosteam@thebeat.co" }
   s.social_media_url   = "http://twitter.com/taxibeat"
-  s.source             = { :git => "https://github.com/taxibeat/BeatChain.git", :tag => "#{s.version}" }
+  s.source             = { :git => "https://github.com/beatlabs/BeatChain.git", :tag => "#{s.version}" }
   s.platform           = :ios, '10.0'
   s.source_files       = ["BeatChain/**/*.swift", "BeatChain/BeatChain.h"]
   s.swift_version      = "4.2"
